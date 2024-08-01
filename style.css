@@ -27,6 +27,7 @@ body {
     background-position: top center;
     background-size: cover;
     --surface-color-hover: rgba(0,0,0, 0.02);
+    height: 100vh;
 }
 
 body * { 
@@ -35,8 +36,9 @@ body * {
 }
 
 #container {
-    width: 360px;
+    width: 100%;
     margin: auto;
+    max-width: 588px;
 
     margin-top: 56px;
     padding: 0 24px;
@@ -138,4 +140,13 @@ ul li a:hover {
 footer {
     padding: 24px 0;
     text-align: center;
+}
+
+@media (min-width: 700px) {
+    :root {
+        --bg-url: url(./assets/bg-desktop.jpg);
+    }
+    .light {
+        --bg-url: url(./assets/bg-desktop-light.jpg);
+    }
 }
